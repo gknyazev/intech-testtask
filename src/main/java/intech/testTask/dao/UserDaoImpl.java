@@ -17,6 +17,9 @@ public class UserDaoImpl extends BaseDaoImpl<UserEntity> implements UserDao {
 		return (UserEntity) sessionFactory.getCurrentSession().createQuery("from UserEntity where id= :userid").setParameter("userid", id).uniqueResult();
 	}
 	
+	/**
+	 * {@inheritDoc}
+	 */
 	@Override
 	public boolean removeById(Long id) {
 		UserEntity entity = (UserEntity) sessionFactory.getCurrentSession().createQuery("from UserEntity where id= :userid").setParameter("userid", id).uniqueResult();

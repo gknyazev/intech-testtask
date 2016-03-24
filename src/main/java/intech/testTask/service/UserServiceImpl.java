@@ -27,6 +27,9 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserRoleDao userRoleDao;
 
+	/**
+	 *  {@inheritDoc} 
+	 */
 	@Override
 	@Transactional
 	public void registerNewUser(UserDto dto) {
@@ -44,6 +47,9 @@ public class UserServiceImpl implements UserService {
 		userRoleDao.saveOrUpdate(role);
 	}
 
+	/**
+	 *  {@inheritDoc} 
+	 */
 	@Override
 	@Transactional
 	public void updatePassword(String login, String newPassword) {
@@ -52,6 +58,9 @@ public class UserServiceImpl implements UserService {
 		userDao.saveOrUpdate(entity);
 	}
 
+	/**
+	 *  {@inheritDoc} 
+	 */
 	@Override
 	@Transactional
 	public ServiceResult addFriend(String userlogin, String friendLogin) {
@@ -72,6 +81,9 @@ public class UserServiceImpl implements UserService {
 		return ServiceResult.ok();
 	}
 
+	/**
+	 *  {@inheritDoc} 
+	 */
 	@Override
 	@Transactional
 	public String getCredentials(String userlogin) {
@@ -86,12 +98,18 @@ public class UserServiceImpl implements UserService {
 		return user.getFriends();
 	}
 
+	/**
+	 *  {@inheritDoc} 
+	 */
 	@Override
 	@Transactional
 	public void removeFriend(String userLogin, String friendLogin) {
 		userDao.removeFriend(userLogin, friendLogin);
 	}
 
+	/**
+	 *  {@inheritDoc} 
+	 */
 	@Override
 	@Transactional
 	public Set<UserDto> getAllUsers() {
@@ -100,18 +118,27 @@ public class UserServiceImpl implements UserService {
 		return users;
 	}
 
+	/**
+	 *  {@inheritDoc} 
+	 */
 	@Override
 	@Transactional
 	public Boolean userExists(String login) {
 		return userDao.getByLogin(login) != null;
 	}
 
+	/**
+	 *  {@inheritDoc} 
+	 */
 	@Override
 	@Transactional
 	public Boolean emailExists(String email) {
 		return userDao.getByEmail(email) != null;
 	}
 
+	/**
+	 *  {@inheritDoc} 
+	 */
 	@Override
 	@Transactional
 	public boolean deleteUser(Long userId) {
@@ -129,6 +156,9 @@ public class UserServiceImpl implements UserService {
 		return true;
 	}
 
+	/**
+	 *  {@inheritDoc} 
+	 */
 	@Override
 	@Transactional
 	public boolean revokeAdmin(Long id) {

@@ -21,7 +21,7 @@
 <meta name="context_path" content="${pageContext.request.contextPath}" />
 <base href="${fn:substring(url, 0, fn:length(url) - fn:length(uri))}${req.contextPath}/">
 
-<title>Signin Template for Bootstrap</title>
+<title>Тестовое задание для Intech</title>
 
 <!-- Bootstrap core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">

@@ -15,7 +15,7 @@
 <meta name="_csrf_header" content="${_csrf.headerName}" />
 <meta name="context_path" content="${pageContext.request.contextPath}" />
 <base href="${fn:substring(url, 0, fn:length(url) - fn:length(uri))}${req.contextPath}/">
-<title>SB Admin - Bootstrap Admin Template</title>
+<title>Тестовое задание для Intech</title>
 
 <!-- Bootstrap Core CSS -->
 <link href="resources/css/bootstrap.min.css" rel="stylesheet">
